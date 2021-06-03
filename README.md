@@ -11,7 +11,7 @@ Prerequisite: VPC and subnets should be created prior to applying this module.  
 
 ```hcl
 module "ASG-with-ALB" {
-    source             = "osmdilya/asg-alb/aws"
+    source             = "omiradil/asg-alb/aws"
     region             = "us-east-1"
     vpc_id             = "vpc-0234cd7ed377fefe9"
     subnet1            = "subnet-0125f46f438c78275"
