@@ -1,17 +1,5 @@
-# AWS ASG with ALB and WAF Terraform module 
-
-## The module creates:
-- Autoscaling Group
-- Application Load Balancer
-- AWS WAF Classic with two blacklist rules (country name and IP set address)  
-
-Prerequisite: VPC and subnets should be created prior to applying this module.  You can use your own AMI to customize the launch template.
-
-### Copy this code into a .tf file and run terraform apply
-
-```hcl
 module "ASG-with-ALB" {
-    source             = "osmdilya/asg-alb/aws"
+    source             = "../"
     region             = "us-east-1"
     vpc_id             = "vpc-0234cd7ed377fefe9"
     subnet1            = "subnet-0125f46f438c78275"
@@ -59,5 +47,3 @@ module "ASG-with-ALB" {
                     
     }
 }
-
-```
